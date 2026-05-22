@@ -3,198 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>יוזמת חינוך בנושא בריאות מינית | Pediatric Hematology-Oncology Nursing</title>
-  <meta name="description" content="Poster landing page for a sexual health education initiative in pediatric hematology-oncology nursing." />
+  <title>Sexual Health Education Initiative</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;700;800&family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
   <style>
-    :root {
-      --navy: #173765;
-      --blue: #2563a8;
-      --sky: #d9ecf8;
-      --pale: #f3f9fd;
-      --red: #c0392b;
-      --gold: #d4aa55;
-      --text: #24364a;
-      --muted: #64748b;
-      --white: #ffffff;
-      --border: rgba(37, 99, 168, 0.18);
-      --shadow: 0 24px 70px rgba(23, 55, 101, 0.18);
+    :root{
+      --navy:#173765;
+      --blue:#2563a8;
+      --red:#c0392b;
+      --bg:#f4f8fc;
+      --text:#24364a;
+      --muted:#6b7b8c;
+      --white:#ffffff;
+      --border:rgba(37,99,168,0.14);
     }
 
-    * { box-sizing: border-box; }
+    *{
+      box-sizing:border-box;
+    }
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: 'Noto Sans Hebrew', 'Inter', system-ui, sans-serif;
-      color: var(--text);
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
       background:
-        radial-gradient(circle at top right, rgba(37,99,168,0.18), transparent 34rem),
-        radial-gradient(circle at bottom left, rgba(192,57,43,0.13), transparent 30rem),
-        linear-gradient(135deg, #f7fbff 0%, #eef6fc 42%, #ffffff 100%);
+        radial-gradient(circle at top right, rgba(37,99,168,0.12), transparent 35rem),
+        linear-gradient(135deg,#f7fbff 0%,#eef5fb 100%);
+      font-family:'Noto Sans Hebrew','Inter',sans-serif;
+      color:var(--text);
     }
 
-    .page {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 18px;
+    .container{
+      width:min(920px,100%);
+      background:rgba(255,255,255,0.94);
+      border:1px solid rgba(255,255,255,0.9);
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:0 24px 70px rgba(23,55,101,0.16);
+      backdrop-filter:blur(10px);
     }
 
-    .wrap {
-      width: min(1080px, 100%);
-      background: rgba(255,255,255,0.82);
-      border: 1px solid rgba(255,255,255,0.9);
-      border-radius: 30px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      backdrop-filter: blur(14px);
+    .topbar{
+      height:6px;
+      background:linear-gradient(90deg,var(--navy),var(--blue),var(--red));
     }
 
-    .topbar {
-      height: 7px;
-      background: linear-gradient(90deg, var(--navy), var(--blue), var(--red));
+    .content{
+      padding:64px 56px 56px;
+      text-align:center;
     }
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 34px;
-      padding: 54px;
-      align-items: center;
-      justify-items: center;
-      position: relative;
+    .tag{
+      display:inline-block;
+      background:#eef4fb;
+      color:var(--blue);
+      border:1px solid rgba(37,99,168,0.14);
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:24px;
     }
 
-    .panel {
-      width: min(520px, 100%);
-      background: linear-gradient(180deg, #ffffff, #f4f9fd);
-      border: 1px solid var(--border);
-      border-radius: 26px;
-      padding: 22px;
-      box-shadow: 0 18px 45px rgba(27,58,107,0.13);
+    h1{
+      margin:0;
+      color:var(--navy);
+      font-size:42px;
+      line-height:1.3;
+      font-weight:800;
+      letter-spacing:-0.02em;
     }
 
-    .panel-title {
-      color: var(--navy);
-      font-size: 18px;
-      font-weight: 800;
-      margin: 0 0 12px;
-      text-align: center;
+    .authors{
+      margin-top:28px;
+      font-size:18px;
+      font-weight:700;
+      color:var(--text);
     }
 
-    .poster-card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 18px;
-      margin-top: 14px;
-      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    .affiliation{
+      margin-top:10px;
+      font-size:15px;
+      color:var(--muted);
+      line-height:1.7;
     }
 
-    .poster-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(37,99,168,0.42);
-      box-shadow: 0 18px 35px rgba(37,99,168,0.13);
+    .event{
+      margin-top:26px;
+      font-size:15px;
+      color:var(--blue);
+      font-weight:700;
     }
 
-    .poster-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+    .buttons{
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      margin-top:42px;
+      flex-wrap:wrap;
     }
 
-    .lang {
-      font-size: 21px;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 5px;
+    .btn{
+      text-decoration:none;
+      color:white;
+      background:var(--navy);
+      padding:16px 34px;
+      border-radius:16px;
+      font-size:18px;
+      font-weight:700;
+      transition:.18s ease;
+      min-width:180px;
     }
 
-    .desc {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.55;
+    .btn:hover{
+      transform:translateY(-2px);
+      background:var(--blue);
     }
 
-    .arrow {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      flex: none;
-      background: var(--blue);
-      color: white;
-      font-size: 20px;
-      font-weight: 800;
+    .btn.secondary{
+      background:white;
+      color:var(--navy);
+      border:1px solid var(--border);
     }
 
-    .english { direction: ltr; text-align: left; font-family: 'Inter', 'Noto Sans Hebrew', sans-serif; }
-
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 22px 54px 34px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.6;
+    .btn.secondary:hover{
+      background:#f4f8fc;
     }
 
-    .footer strong { color: var(--navy); }
+    @media(max-width:720px){
 
-    @media (max-width: 830px) {
-      .hero { padding: 34px 22px; }
-      .footer { flex-direction: column; padding: 20px 22px 28px; }
-      .wrap { border-radius: 24px; }
-      .panel { padding: 16px; }
+      .content{
+        padding:44px 24px;
+      }
+
+      h1{
+        font-size:30px;
+      }
+
+      .authors{
+        font-size:16px;
+      }
+
+      .btn{
+        width:100%;
+      }
     }
   </style>
 </head>
+
 <body>
-  <main class="page">
-    <section class="wrap" aria-label="Poster landing page">
-      <div class="topbar"></div>
-      <div class="hero">
-        <aside class="panel" aria-label="בחרו שפה">
-          <p class="panel-title">בחרו גרסת פוסטר</p>
 
-          <a class="poster-card" href="he.html">
-            <div class="poster-row">
-              <div>
-                <div class="lang">עברית</div>
-                <div class="desc">פתיחת הפוסטר בעברית, בתצוגה מלאה.</div>
-              </div>
-              <div class="arrow">←</div>
-            </div>
-          </a>
+  <main class="container">
 
-          <a class="poster-card english" href="en.html">
-            <div class="poster-row">
-              <div>
-                <div class="lang">English</div>
-                <div class="desc">Open the full English poster version.</div>
-              </div>
-              <div class="arrow">→</div>
-            </div>
-          </a>
-        </aside>
+    <div class="topbar"></div>
+
+    <section class="content">
+
+      <div class="tag">
+        Conference Poster Presentation
       </div>
 
-      <footer class="footer">
-        <div><strong>Sexual Health Education Initiative</strong><br> Pediatric Hematology-Oncology Nursing</div>
-        <div>Designed for simple sharing via QR code, email, or conference materials.</div>
-      </footer>
+      <h1>
+        Sexual Health Education Initiative in Pediatric Hematology–Oncology Nursing
+      </h1>
+
+      <div class="authors">
+        Yael Ben David, RN, M.A.
+      </div>
+
+      <div class="affiliation">
+        Pediatric Hematology–Oncology Department<br>
+        Israeli Oncology Nursing Society
+      </div>
+
+      <div class="event">
+        Annual Oncology Nursing Conference 2026
+      </div>
+
+      <div class="buttons">
+        <a href="he.html" class="btn secondary">עברית</a>
+        <a href="en.html" class="btn">English</a>
+      </div>
+
     </section>
+
   </main>
+
 </body>
 </html>
